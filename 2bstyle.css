@@ -1,0 +1,95 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f4f4f4; /* Light background for contrast */
+}
+
+header {
+  background-image: url('images/header.webp');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+h1 {
+  font-size: 3em;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+main {
+  padding: 20px;
+  max-width: 800px; /* Center content */
+  margin: 0 auto; /* Center main section */
+}
+
+h2 {
+  font-family: 'Roboto Slab', serif;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #2c3e50; /* Darker color for headings */
+}
+
+.listicle {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-item {
+  display: flex;
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #e6e6e6;
+  border-radius: 8px;
+  background-color: #ffffff; /* White background for list items */
+  align-items: flex-start;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.list-item:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.list-item:nth-child(even) {
+  flex-direction: row; /* Keep even items in row layout */
+}
+
+.list-item .content {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.list-item h3 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.5em;
+  margin-top: 0;
+  color: #2980b9; /* Blue color for item titles */
+}
+
+.list-item p {
+  margin: 10px 0;
+}
+
+.list-image {
+  width: 100%; /* Full width */
+  max-width: 600px; /* Max width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /*-8w Cover the area */
+  display: block; /* Block element */
+  margin: 20px auto; /* Center the image */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Image shadow */
+}
+.image{
+  height: 400px;
+}

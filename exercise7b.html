@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #7: Simple playlist</title>
+    <link rel="stylesheet" href="exercise7.css">
+    <script>
+window.onload = function() {
+    // Get references to input field, add button, and playlist
+    const songInput = document.getElementById('songTextInput');
+    const addButton = document.getElementById('addButton');
+    const playlist = document.getElementById('playlist');
+
+    // Function to add a song to the playlist
+    function addSong() {
+        // Get the value of the input field and trim any extra whitespace
+        const songName = songInput.value.trim();
+
+        // Only add the song if the input is not empty
+        if (songName !== '') {
+            // Create a new list item
+            const listItem = document.createElement('li');
+            listItem.textContent = songName;
+
+            // Create the delete button/link
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Delete';
+            deleteButton.style.marginLeft = '15px'; // Add space between song name and delete button
+
+            // Add event listener to delete the song when the button is clicked
+            deleteButton.addEventListener('click', function() {
+                playlist.removeChild(listItem); // Remove the list item from the playlist
+            });
+
+            // Append the delete button to the list item
+            listItem.appendChild(deleteButton);
+
+            // Add the list item to the playlist
+            playlist.appendChild(listItem);
+
+            // Clear the input field after adding the song
+            songInput.value = '';
+        }
+    }
+
+    // Attach the addSong function to the button's click event
+    addButton.addEventListener('click', addSong);
+
+    // Optionally, allow adding a song by pressing Enter
+    songInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); // Prevent the default form submission
+            addSong();
+        }
+    });
+};
+    </script>
+</head>
+<body>
+
+<form>
+    <input type="text" id="songTextInput" size="40" placeholder="Song name">
+    <input type="button" id="addButton" value="Add Song">
+</form>
+
+<ul id="playlist">
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Evil Extension",
+  "version": "1.0",
+  "description": "Replaces 'you/their/there/they're' with incorrect versions for fun.",
+  "icons": {
+    "16": "evil.png",
+    "48": "evil.png",
+    "128": "evil.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["page.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": ["activeTab"]
+}

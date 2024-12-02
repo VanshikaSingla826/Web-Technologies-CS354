@@ -1,0 +1,30 @@
+<order order_id="12345" description="Order for textbooks" request_date="2024-11-08">
+    <line_item>
+        <book book_id="001" book_name="The Mystery Novel" genre="mystery" publish_date="2020-06-15">
+            <author>
+                <first_name>John</first_name>
+                <last_name>Doe</last_name>
+                <bio>John Doe is a bestselling author known for his mystery novels.</bio>
+                <pen_name>J. D.</pen_name>
+            </author>
+            <author>
+                <first_name>Jane</first_name>
+                <last_name>Smith</last_name>
+                <bio>Jane Smith is known for her engaging storytelling.</bio>
+            </author>
+        </book>
+        <quantity>3</quantity>
+        <price>12.99</price>
+    </line_item>
+    <line_item>
+        <book book_id="002" book_name="The Science of Fiction" genre="science-fiction" publish_date="2021-01-01">
+            <author>
+                <first_name>Albert</first_name>
+                <last_name>Einstein</last_name>
+                <bio>Albert is renowned in the field of science fiction.</bio>
+            </author>
+        </book>
+        <quantity>2</quantity>
+        <price>15.00</price>
+    </line_item>
+</order>

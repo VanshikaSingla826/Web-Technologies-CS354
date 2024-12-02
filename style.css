@@ -1,0 +1,113 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(244, 244, 244);
+  font-size: 14px; /* Reduced base font size */
+}
+
+header {
+  background: rgb(68, 68, 68);
+  color: rgb(255, 255, 255);
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+}
+
+header img {
+  border-radius: 50%;
+  width: 120px; /* Reduced image size */
+  height: auto;
+  float: right;
+  margin-left: 20px;
+}
+
+h1 {
+  margin: 10px 0;
+  font-size: 32px; /* Reduced to a more formal size */
+}
+
+h4 {
+  color: rgb(68, 68, 68);
+  border-bottom: 2px solid rgb(221, 221, 221);
+  padding-bottom: 5px;
+  font-size: 20px; /* Reduced to a more formal size */
+  margin-top: 10px; 
+}
+
+.right p {
+  font-size: 16px; /* Reduced to a more formal size */
+  margin: 10px 0; 
+}
+
+#email, #contact, #address {
+  margin: 5px 0;
+  color: rgb(255, 255, 255);
+}
+
+#email a {
+  color: rgb(255, 255, 255);
+  text-decoration: none; 
+  cursor: default; 
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.right {
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 60px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 5px 0;
+  font-size: 16px; /* Reduced to a more formal size */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+table th, table td {
+  border: 1px solid rgb(221, 221, 221);
+  padding: 12px; /* Reduced padding for a tighter layout */
+  text-align: left;
+  font-size: 16px; /* Reduced to a more formal size */
+}
+
+table th {
+  background-color: rgb(242, 242, 242);
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: rgb(68, 68, 68);
+  color: rgb(255, 255, 255);
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  margin-top: 20px;
+}
+
+table tr:hover {
+  background-color: rgb(230, 230, 230);
+}

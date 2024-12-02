@@ -1,0 +1,54 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="order">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="line_item" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="book">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="author" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="first_name" type="xs:string" />
+                                                    <xs:element name="last_name" type="xs:string" />
+                                                    <xs:element name="bio" type="xs:string" />
+                                                    <xs:element name="pen_name" type="xs:string" minOccurs="0" />
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="book_id" type="xs:string" use="required" />
+                                    <xs:attribute name="book_name" type="xs:string" use="required" />
+                                    <xs:attribute name="genre" use="required">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="science-fiction" />
+                                                <xs:enumeration value="mystery" />
+                                                <xs:enumeration value="thriller" />
+                                                <xs:enumeration value="drama" />
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                    <xs:attribute name="publish_date" type="xs:date" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="quantity" type="xs:integer" />
+                            <xs:element name="price">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:decimal">
+                                        <xs:minExclusive value="0" />
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="order_id" type="xs:string" use="required" />
+            <xs:attribute name="description" type="xs:string" use="required" />
+            <xs:attribute name="request_date" type="xs:date" use="required" />
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

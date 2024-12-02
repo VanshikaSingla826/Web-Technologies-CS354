@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #5: Input Check</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="excercise5.css">
+</head>
+<body>
+
+<form name="pw">
+    <table>
+        <tr>
+            <td>Password (min 6 characters):</td>
+            <td><input type="password" name="password1" id="password1" size="10" placeholder="Password"></td>
+            <td>
+                <div id="pw1_check" class="err"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>Repeat password:</td>
+            <td><input type="password" name="password2" id="password2" size="10" placeholder="Password"></td>
+            <td>
+                <div id="pw2_check" class="err"></div>
+            </td>
+        </tr>
+    </table>
+
+    <input type="submit" value="Submit" id="submitBtn"/>
+</form>
+
+<div class="preview">
+    <img src="exercise5_1.png" id="image1" alt="Password too short preview">
+    <img src="exercise5_2.png" id="image2" alt="Passwords do not match preview">
+    <img src="exercise5_3.png" id="image3" alt="Valid passwords preview">
+</div>
+
+<!-- Link to external JavaScript file -->
+<script src="excercise5.js"></script>
+
+</body>
+</html>
